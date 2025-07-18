@@ -4,28 +4,15 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-anyhow = "1.0"
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-hex = "0.4"
-bs58 = "0.4"
-clap = { version = "4.4", features = ["derive"] }
-solana-client = "1.18"
-solana-sdk = "1.18"
-
-# We now point to a local copy of the FROST repository
-# that you have cloned manually. This avoids cargo's git-fetch issues.
-ed25519-dalek = "1.0"
-
-# Explicitly require the same curve25519-dalek minor version Solana uses,
-# but add *no* extra features so that it matches all dependants.
-curve25519-dalek = "3.2.1"
-
-# RNG
-rand = "0.8" 
-
-sharks = "0.5" 
-
-# FROST threshold signing
-
-# removed frost libs to avoid dependency conflicts 
+anyhow         = "1.0"
+serde          = { version = "1.0", features = ["derive"] }
+serde_json     = "1.0"
+hex            = "0.4"
+bs58           = "0.4"
+clap           = { version = "4.4", features = ["derive"] }
+solana-client  = "1.18"
+solana-sdk     = "1.18"
+rand           = "0.8"
+rand_core      = "0.6"
+curve25519-dalek = { version = "3.2.1", default-features = false, features = ["u64_backend"] }
+sha2 = "0.9" 
