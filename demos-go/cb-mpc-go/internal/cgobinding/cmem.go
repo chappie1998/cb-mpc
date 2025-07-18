@@ -8,21 +8,21 @@ import (
 #cgo                                CXXFLAGS:  -std=c++17 -Wno-switch -Wno-parentheses -Wno-attributes -Wno-deprecated-declarations -DNO_DEPRECATED_OPENSSL
 #cgo                                CFLAGS:    -Wno-deprecated-declarations
 #cgo arm64                          CXXFLAGS:  -march=armv8-a+crypto
-#cgo !linux                         LDFLAGS:   -lcrypto
+#cgo android                        LDFLAGS:   -lcrypto
 #cgo android                        LDFLAGS:   -lcrypto -static-libstdc++
 #cgo                                LDFLAGS:   -ldl
 #cgo linux,!android                 CFLAGS:    -I/usr/local/include
 #cgo linux,!android                 CXXFLAGS:  -I/usr/local/include
 #cgo linux,!android                 LDFLAGS:   /usr/local/lib64/libcrypto.a
-#cgo darwin,!iossimulator,!ios  	CFLAGS:    -I/usr/local/opt/openssl@3.2.0/include
-#cgo darwin,!iossimulator,!ios  	CXXFLAGS:  -I/usr/local/opt/openssl@3.2.0/include
-#cgo darwin,!iossimulator,!ios  	LDFLAGS:   -L/usr/local/opt/openssl@3.2.0/lib
+#cgo darwin,!iossimulator,!ios  	CFLAGS:    -I/opt/homebrew/opt/openssl@3/include
+#cgo darwin,!iossimulator,!ios  	CXXFLAGS:  -I/opt/homebrew/opt/openssl@3/include
+#cgo darwin,!iossimulator,!ios  	LDFLAGS:   -L/opt/homebrew/opt/openssl@3/lib -lcrypto -lssl
 
 #cgo CFLAGS:    -I${SRCDIR}
 #cgo CXXFLAGS:  -I${SRCDIR}
-#cgo CFLAGS:    -I/usr/local/opt/cbmpc/include
-#cgo CXXFLAGS:  -I/usr/local/opt/cbmpc/include
-#cgo LDFLAGS:   -L/usr/local/opt/cbmpc/lib
+#cgo CFLAGS:    -I../../../../src
+#cgo CXXFLAGS:  -I../../../../src
+#cgo LDFLAGS:   -L../../../../lib/Release
 #cgo LDFLAGS:   -lcbmpc
 #cgo linux,!android                 LDFLAGS:   /usr/local/lib64/libcrypto.a
 

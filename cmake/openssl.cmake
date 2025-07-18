@@ -6,8 +6,11 @@ macro(link_openssl TARGET_NAME)
   endif()
 
   if(IS_MACOS)
-    include_directories("/usr/local/opt/openssl@3.2.0/include")
-    target_link_libraries(${TARGET_NAME} PUBLIC
-                          "/usr/local/opt/openssl@3.2.0/lib/libcrypto.a")
+    # Use Homebrew OpenSSL on macOS
+    set(OPENSSL_PATH "/opt/homebrew/opt/openssl@3")
+    include_directories(${OPENSSL_PATH}/include)
+    target_link_libraries(${TARGET_NAME} PUBLIC 
+                          ${OPENSSL_PATH}/lib/libcrypto.a
+                          ${OPENSSL_PATH}/lib/libssl.a)
   endif()
 endmacro(link_openssl)
