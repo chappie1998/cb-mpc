@@ -6,9 +6,9 @@
       "ciphersuite": "FROST-ED25519-SHA512-v1"
     },
     "identifier": "0100000000000000000000000000000000000000000000000000000000000000",
-    "signing_share": "853f4794eeb04d47ca5398b9950801f7f5ea724b93d7a7231544fefa1109ce09",
-    "verifying_share": "ef177017253325d40c97f4633d7a9ea9aa33b7208f16e6bb16fa81ded81c6cd4",
-    "verifying_key": "bba4ee6505053361e3a8da615ab8983cedba3bffcb34bc9c1899b80859f40f28",
+    "signing_share": "abdd19637384c6aaf1264d23a7f0c88b1107f98b0917f48be86626537a5d200c",
+    "verifying_share": "67f34ddc9646e0e7b90848cc688fc972d3aa3c9f3ced3f8b7db3fe598968bd15",
+    "verifying_key": "de0bb461373d4db369b8ec6ced4d154a5351076df52b6c01e0355886cba8e595",
     "min_signers": 2
   }
 }
