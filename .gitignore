@@ -22,3 +22,5 @@ a.out
 # gh-pages files
 docsgen/
 node_modules/
+
+**target/
