@@ -3433,24 +3433,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "solana-frost-transfer"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "bs58",
- "clap 4.5.41",
- "curve25519-dalek",
- "hex",
- "rand 0.8.5",
- "rand_core 0.6.4",
- "serde",
- "serde_json",
- "sha2 0.9.9",
- "solana-client",
- "solana-sdk",
-]
-
-[[package]]
 name = "solana-frozen-abi"
 version = "1.18.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3521,6 +3503,19 @@ dependencies = [
  "reqwest",
  "solana-sdk",
  "thiserror",
+]
+
+[[package]]
+name = "solana-mpc-transfer"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap 4.5.41",
+ "hex",
+ "serde",
+ "serde_json",
+ "solana-client",
+ "solana-sdk",
 ]
 
 [[package]]
